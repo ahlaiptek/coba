@@ -21,6 +21,7 @@ const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSr32TvNGwHdiCuuwVe
 fetch(url).then(e => e.text()).then(e => {
     let data = csvToJson(e);
     console.log(data);
+    document.body.innerHTML = JSON.stringify(data);
 
     // for (let i = 0; i < data.length; i++) {
     //     console.log(data[i]["Label Spesifik"]);
